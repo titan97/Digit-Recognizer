@@ -53,17 +53,17 @@ function redraw() {
     context.strokeStyle = curColor;
     context.lineJoin = "round";
     context.lineWidth = 3;
-for (var i = 0; i < clickX.length; i++) {
-    context.beginPath();
-    if (clickDrag[i] && i) {
-        context.moveTo(clickX[i - 1], clickY[i - 1]);
-    } else {
-        context.moveTo(clickX[i] - 1, clickY[i]);
-    }
-    context.lineTo(clickX[i], clickY[i]);
-    context.closePath();
-    context.stroke();
-}
+	for (var i = 0; i < clickX.length; i++) {
+		context.beginPath();
+		if (clickDrag[i] && i) {
+			context.moveTo(clickX[i - 1], clickY[i - 1]);
+		} else {
+			context.moveTo(clickX[i] - 1, clickY[i]);
+		}
+		context.lineTo(clickX[i], clickY[i]);
+		context.closePath();
+		context.stroke();
+	}
 }
 
 /**
